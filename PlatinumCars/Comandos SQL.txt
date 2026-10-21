@@ -1,0 +1,48 @@
+create table cliente
+(
+cpf int(14) primary key,
+nome varchar(100) not null,
+cidade varchar(100) not null,
+estado char(2) not null,
+telefone varchar(20) not null
+
+);
+
+create table vendedor
+(
+cpf int(14) primary key,
+nome varchar(100) not null,
+cidade varchar(100) not null,
+estado char(2) not null,
+telefone varchar(20) not null,
+email varchar(100) not null
+
+);
+
+create table estoque
+(
+placa varchar(20) primary key,
+nome varchar(100) not null,
+modelo varchar(100) not null,
+cor varchar(100) not null,
+chassi varchar(100) not null,
+spoiler varchar(100) not null,
+categoria varchar(100) not null,
+ano_carro year not null,
+quantidade int(5) not null
+
+);
+
+create table vendas
+(
+
+id_venda int auto_increment primary key,
+cpf_cliente int(14) not null,
+cpf_vendedor int(14) not null,
+placa varchar(100) not null,
+produto varchar(100) not null,
+preco decimal(10,2) not null,
+data varchar(100) not null,
+forma_pagamento varchar(100) not null
+
+);
